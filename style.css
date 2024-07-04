@@ -9,8 +9,9 @@
 html,
 body {
   height: 100vh;
-  height: 100vw;
+  width: 100vw;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 .navigation {
@@ -198,4 +199,98 @@ body {
 .search-box .search-btn:hover {
   background-color: #5ccf71;
   transition: all ease 0.3s;
+}
+
+#category {
+  margin: 0 3vw;
+}
+
+.category-heading,
+.product-heading,
+.partner-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.category-heading h2,
+.product-heading h3,
+.partner-heading h3 {
+  font-size: 1.56rem;
+  font-weight: 700;
+  color: #202020;
+  letter-spacing: 0.5px;
+}
+
+.category-heading span,
+.product-heading span {
+  color: #a7a7a7;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Стилі для контейнера категорій */
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Стилі для коробок категорій */
+.category-box {
+  background-color: #fafafa;
+  border-radius: 10px;
+  min-height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Стилі для посилань у коробках */
+.category-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-box img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.2s ease;
+}
+
+.category-box h3 {
+  color: #393939;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.category-box span {
+  color: #7a7a7a;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.category-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-box:hover img {
+  transform: scale(1.1);
 }
